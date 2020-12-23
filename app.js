@@ -29,8 +29,7 @@ const { connect, closeConnection } = require("./connection/mongodb");
         birthday: Joi.date().max('1-1-2004').iso()
       }).with('username', 'birthday')
         
-
-      const validation = schema.validate(req.body);
+      const validation = schema.validate(data);
       res.json(validation);
     });
 
