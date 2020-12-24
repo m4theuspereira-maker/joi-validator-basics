@@ -15,8 +15,8 @@ const { connect, closeConnection } = require("./connection/mongodb");
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
 
-    const userRoute = require("./routes");
-    app.use("/", userRoute);
+    const userRoute = require("./routes/userRouter");
+    app.use("/user", userRoute);
 
     app.post("/test", async (req, res, next) => {
       const Joi = require("joi");
