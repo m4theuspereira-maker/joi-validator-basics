@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// routes
+
 
 
 function createAccountSchema(req, res, next) {
